@@ -14,5 +14,7 @@ public class PlayerUnitTests
         
         Assert.True(stats.health == 16);
         Assert.True(stats.damageDice == 8);
+        
+        Assert.True(stats.armorClass == 15);
     }
 }
