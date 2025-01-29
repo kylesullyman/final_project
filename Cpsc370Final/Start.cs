@@ -13,6 +13,8 @@ public class Start
 
     private ArrayList classList = new ArrayList();
 
+    public string classInput; 
+
     private void StartScriptInit()
     {
         classList.Add("Warrior");
@@ -33,6 +35,32 @@ public class Start
         {
             Console.WriteLine("Welcome to the start phase of the game!");
             GetNameInput();
+            GetClassInput();
+        }
+    }
+
+    private void GetClassInput()
+    {
+        while (true)
+        {
+            Console.WriteLine("Your options are: ");
+            foreach(string s in classList)
+            {
+                Console.WriteLine(s);
+            }
+            Console.WriteLine("Please select a class: ");
+            string input = Console.ReadLine();
+            if (classList.Contains(input))
+            {
+                Console.WriteLine("You have selected: " + input);
+                classInput = input;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid class.");
+                continue;
+            }
         }
     }
 
