@@ -25,17 +25,18 @@ public class Start
 
     private string options = "abcd";
     
-    public void BeginStartPhase(string[] inputArgs)
+    public void BeginStartPhase()
     {
         StartScriptInit();
         
-        args = inputArgs;
+        //args = inputArgs;
 
         while (!isStartPhaseComplete)
         {
             Console.WriteLine("Welcome to the start phase of the game!");
             GetNameInput();
             GetClassInput();
+            isStartPhaseComplete = true;
         }
     }
 
