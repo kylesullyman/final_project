@@ -33,22 +33,7 @@ public class CombatPhase
 
     private void RunCombatPhaseLoop()
     {
-        bool isCombatRunning = true;
-        // 0 is player turn, 1 is enemy turn
-        int playerTurn = 0;
-
-        while (isCombatRunning)
-        {
-            if (playerTurn == 0)
-            {
-                string choice = GetPlayerChoice();
-                ExecutePlayerChoice(choice);
-            }
-            else
-            {
-                string choice = GetAIChoice();
-            }
-        }
+        while (Program.player.health > 0 && Program.)
     }
 
     private string GetPlayerChoice()
@@ -96,24 +81,5 @@ public class CombatPhase
         }
 
         return output;
-    }
-    
-    private void ExecutePlayerChoice(string choice)
-    {
-        switch (choice)
-        {
-            case "1":
-                Console.WriteLine("You chose to attack!");
-               Program.playerRoundDamage = CombatPhaseActions.AttackDamage(1, Program.player.damageDice);
-                enemy.health -= attackDamage;
-                CombatMessages.PlayerAttackText(attackDamage);
-                break;
-            case "2":
-                Console.WriteLine("You chose to use your special!");
-                break;
-            case "3":
-                Console.WriteLine("You chose to dodge!");
-                break;
-        }
     }
 }
