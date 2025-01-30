@@ -2,6 +2,11 @@
 namespace Cpsc370Final;
 class Program
 {
+    public static string playerName;
+    public static string playerClass;
+    public static int playerRoundDamage;
+    public static int enemyRoundDamage;
+    
     static void Main(string[] args)
     {
         /*if (args.Length < 1)
@@ -12,6 +17,9 @@ class Program
         */
         Start start = new Start();
         start.BeginStartPhase();
+        playerName = start.playerName;
+        playerClass = start.classInput;
+        Console.WriteLine(playerClass, playerName);
 
     }
 
