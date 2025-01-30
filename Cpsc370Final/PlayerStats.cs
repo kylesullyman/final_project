@@ -19,9 +19,11 @@ public class PlayerStats
     
     
     public int health;
+    public int damage;
     public int damageDice;
     public int dodgeChance;
     public int armorClass;
+    public int specialDamage;
     public int specialCooldown;
     
     
@@ -45,26 +47,27 @@ public class PlayerStats
         switch (playerClass)
         {
             case(PlayerClass.Warrior):
-                SetStats(16, 8, 5, 15, 3);
+                SetStats(16, 5, 8, 5, 15, 3, 8);
                 break;
             
             case(PlayerClass.Assassin):
-                SetStats(7, 10, 2, 6, 2);
+                SetStats(7, 6, 10, 1, 2, 3, 10);
                 break;
             
             case(PlayerClass.Wizard):
-                SetStats(6, 20, 3, 4, 1);
+                SetStats(6,  5,20, 3, 4, 1, 5);
                 break;
             case(PlayerClass.Barbarian):
-                SetStats(10, 6, 3, 10, 2);
+                SetStats(10, 4, 10, 3, 10, 2, 9);
                 break;
         }
     }
 
 
-    private void SetStats(int health, int damageDice, int dodgeChance, int armorClass, int specialCooldown)
+    private void SetStats(int health, int damage, int damageDice, int dodgeChance, int armorClass, int specialCooldown, int specialDamage)
     {
         this.health = health;
+        this.damage = damage;
         this.damageDice = damageDice;
         this.dodgeChance = dodgeChance;
         this.armorClass = armorClass;
