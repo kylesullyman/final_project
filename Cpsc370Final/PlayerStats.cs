@@ -45,18 +45,18 @@ public class PlayerStats
         switch (playerClass)
         {
             case(PlayerClass.Warrior):
-                SetStats(16, 8, 4, 15, 3);
+                SetStats(16, 8, 5, 15, 3);
                 break;
             
             case(PlayerClass.Assassin):
-                SetStats(7, 10, 8, 6, 2);
+                SetStats(7, 10, 2, 6, 2);
                 break;
             
             case(PlayerClass.Wizard):
-                SetStats(6, 20, 5, 4, 1);
+                SetStats(6, 20, 1, 4, 1);
                 break;
             case(PlayerClass.Barbarian):
-                SetStats(10, 6, 6, 10, 2);
+                SetStats(10, 6, 4, 10, 2);
                 break;
         }
     }

@@ -51,6 +51,14 @@ public class Start
             }
             Console.WriteLine("Please select a class: ");
             string input = Console.ReadLine();
+            
+            // Capitalize first letter of input and lowercase the rest
+            input = input.ToLower();
+            char[] inputArray = input.ToCharArray();
+            inputArray[0] = char.ToUpper(inputArray[0]);
+            input = new string(inputArray);
+            
+            
             if (classList.Contains(input))
             {
                 Console.WriteLine("You have selected: " + input);
@@ -71,12 +79,14 @@ public class Start
         {   
             Console.WriteLine("Please enter your name: ");
             string name = Console.ReadLine();
-            playerName = name;
-            if (name == null)
+
             {
                 Console.WriteLine("Please enter a valid name.");
                 continue;
             }
+            
+            playerName = name;
+            
             break;
         }
     }
