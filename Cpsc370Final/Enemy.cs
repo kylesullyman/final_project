@@ -9,7 +9,7 @@ public class Enemy
     
     public string name;
     public int health { get; set; }
-    public int Damage { get; set; }
+    public int damage { get; set; }
     public int damageDice { get; set; }
     public int dodgeChance { get; set; }
     public int armorClass { get; set; }
@@ -54,7 +54,7 @@ public class Enemy
                 setStats("Sir Rattlebones `mcGee", 10, 4, 6, 6, 8, 4, 3);
                 break;
             case EnemyRoster.Spider:
-                setStats("Massive fuckoff spider", 10, 3, 4, 6, 8, 4, 3);
+                setStats("Massive fucking spider", 10, 3, 4, 6, 8, 4, 3);
                 break;
             case EnemyRoster.FishGoblin:
                 setStats("Fish Goblin", 12, 2, 4, 3, 8, 4, 3);

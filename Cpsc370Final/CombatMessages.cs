@@ -55,5 +55,15 @@ public static class CombatMessages
     {
         return ("Enemy failed to Dodge");
     }
+
+    public static string PlayerAttackFail()
+    {
+        return ("Player failed to hit");
+    }
+    public static string EnemyAttackFail()
+    {
+        return ("Enemy failed to hit");
+    }
+    
     
 }

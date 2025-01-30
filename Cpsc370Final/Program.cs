@@ -10,6 +10,9 @@ class Program
     public static bool isGameRunning = false;
 
     public static int roomNumber = 1;
+
+    public static int playerCooldownCount = 0;
+    public static int enemyCooldownCount = 0;
     
     public static PlayerStats player;
     
