@@ -1,3 +1,5 @@
+using System.Net.Http.Headers;
+
 namespace Cpsc370Final;
 
 public static class CombatPhaseActions
@@ -16,6 +18,21 @@ public static class CombatPhaseActions
         int randomNumber = random.Next(1, dodgeChance);
         int choice = GetPlayerInput(dodgeChance);
         if (randomNumber == choice)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static bool EnemyCanDodge(int dodgeChance)
+    {
+        Random random = new Random();
+        int randomNumber = random.Next(1, dodgeChance);
+        int enemyGuess = random.Next(1, dodgeChance);
+        if (enemyGuess == randomNumber)
         {
             return true;
         }
