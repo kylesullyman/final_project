@@ -8,12 +8,14 @@ public class Enemy
 
     
     public string Name;
-    public int Health { get; set; }
-    public int DamageDice { get; set; }
-    public int DodgeChance { get; set; }
-    public int ArmorClass { get; set; }
-    public int SpecialDamage { get; set; }
-    public int SpecialCooldown { get; set; }
+    public int health { get; set; }
+    public int Damage { get; set; }
+    public int damageDice { get; set; }
+    public int dodgeChance { get; set; }
+    public int armorClass { get; set; }
+    public int specialDamage { get; set; }
+    public int specialCooldown { get; set; }
+    
 
     public EnemyRoster enemyType;
 
@@ -38,31 +40,31 @@ public class Enemy
         switch (enemyType)
         {
             case EnemyRoster.Goblin:
-                setStats("Goblin", 8, 2, 4, 4, 4, 2);
+                setStats("Goblin", 8, 3, 4, 4, 4, 4, 2);
                 break;
             
             case EnemyRoster.Golem:
-                setStats("Golem", 16, 3, 20, 10, 5, 3);
+                setStats("Golem", 16, 5, 4, 20, 10, 5, 3);
                 break;
             
             case EnemyRoster.Lobster:
-                setStats("Land Lobster", 10, 3,2, 12, 4, 3);
+                setStats("Land Lobster", 10, 4, 8,2, 12, 4, 3);
                 break;
             case EnemyRoster.Skelaton:
-                setStats("Sir Rattlebones `mcGee", 10, 4, 6, 8, 4, 3);
+                setStats("Sir Rattlebones `mcGee", 10, 4, 6, 6, 8, 4, 3);
                 break;
             case EnemyRoster.Spider:
-                setStats("Massive fuckoff spider", 10, 4, 6, 8, 4, 3);
+                setStats("Massive fuckoff spider", 10, 3, 4, 6, 8, 4, 3);
                 break;
             case EnemyRoster.FishGoblin:
-                setStats("Fish Goblin", 12, 4, 3, 8, 4, 3);
+                setStats("Fish Goblin", 12, 2, 4, 3, 8, 4, 3);
                 break;
             case EnemyRoster.LesserDemon:
-                setStats("Big Red Scary Demon", 16, 4, 2, 7, 8, 5);
+                setStats("Big Red Scary Demon", 16, 5, 8, 2, 7, 8, 5);
                 break;
             
             default:
-                setStats("Goblin", 8, 2, 2, 4, 4, 2);
+                setStats("Glitch Goblin", 8, 9999, 2, 2, 4, 4, 2);
                 enemyType = EnemyRoster.Goblin;
                 break;
             
@@ -71,15 +73,15 @@ public class Enemy
     }
 
 
-    private void setStats(string name, int health, int DamageDice, int dodgeChance, int armorClass, int specialDamage,
+    private void setStats(string name, int health, int damage, int DamageDice, int dodgeChance, int armorClass, int specialDamage,
         int specialCooldown)
     {
         Name = name;
-        Health = health;
-        this.DamageDice = DamageDice;
-        this.DodgeChance = dodgeChance;
-        ArmorClass = armorClass;
-        SpecialDamage = specialDamage;
+        this.health = health;
+        this.damageDice = DamageDice;
+        this.dodgeChance = dodgeChance;
+        this.armorClass = armorClass;
+        this.specialDamage = specialDamage;
     }
     
     
