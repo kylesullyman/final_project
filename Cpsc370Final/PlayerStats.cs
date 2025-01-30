@@ -53,10 +53,10 @@ public class PlayerStats
                 break;
             
             case(PlayerClass.Wizard):
-                SetStats(6, 20, 1, 4, 1);
+                SetStats(6, 20, 3, 4, 1);
                 break;
             case(PlayerClass.Barbarian):
-                SetStats(10, 6, 4, 10, 2);
+                SetStats(10, 6, 3, 10, 2);
                 break;
         }
     }
