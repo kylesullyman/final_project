@@ -6,6 +6,10 @@ class Program
     public static string playerClass;
     public static int playerRoundDamage;
     public static int enemyRoundDamage;
+
+    public static bool isGameRunning = false;
+
+    public static int roomNumber = 1;
     
     static void Main(string[] args)
     {
@@ -19,7 +23,9 @@ class Program
         start.BeginStartPhase();
         playerName = start.playerName;
         playerClass = start.classInput;
-        Console.WriteLine(playerClass, playerName);
+
+        isGameRunning = true;
+        RunMainLoop();
 
     }
 
@@ -32,4 +38,16 @@ class Program
             Console.WriteLine("  Argument " + i +": " + args[i]);
         }
     }
+
+    private static void RunMainLoop()
+    {
+        while (isGameRunning)
+        {
+            if (roomNumber == 1)
+            {
+                // BeginCombatPhase(Enemy enemy);
+            }
+            
+        }
+    } 
 }

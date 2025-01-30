@@ -72,7 +72,7 @@ public class Start
             Console.WriteLine("Please enter your name: ");
             string name = Console.ReadLine();
             playerName = name;
-            if (playerName == null)
+            if (name == null)
             {
                 Console.WriteLine("Please enter a valid name.");
                 continue;
