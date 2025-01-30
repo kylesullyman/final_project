@@ -191,7 +191,17 @@ public class CombatPhase
             Program.playerCooldownCount += 1;
             Program.playerRoundDamage = 0;
             Program.enemyRoundDamage = 0;
+        }
 
+        if (Program.player.health <= 0)
+        {
+            FailPhase.PlayerDefeated(Program.playerName, Program.playerClass);
+            FailPhase.GameOverOptions();
+        }
+
+        if (enemy.health <= 0)
+        {
+            Console.WriteLine("You defeated " + enemy.name);
         }
     }
 
