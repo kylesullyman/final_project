@@ -20,7 +20,16 @@ public class Enemy
 //like the band
     public Enemy()
     {
-        
+        enemyType = GetRandomEnumValue<EnemyRoster>();
+        SetStatsByType();
+    }
+    
+    
+    public T GetRandomEnumValue<T>() where T : Enum
+    {
+        Array values = Enum.GetValues(typeof(T));
+        Random random = new Random();
+        return (T)values.GetValue(random.Next(values.Length));
     }
 
 
