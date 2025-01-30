@@ -7,7 +7,7 @@ public class Enemy
     //MonsterStats: Health, DamageDice(amount of sides a dice has that reflects damage), DodgeChance, ArmorClass, SpecialDamage, SpecialCooldown
 
     
-    public string Name;
+    public string name;
     public int health { get; set; }
     public int Damage { get; set; }
     public int damageDice { get; set; }
@@ -76,7 +76,7 @@ public class Enemy
     private void setStats(string name, int health, int damage, int DamageDice, int dodgeChance, int armorClass, int specialDamage,
         int specialCooldown)
     {
-        Name = name;
+        this.name = name;
         this.health = health;
         this.damageDice = DamageDice;
         this.dodgeChance = dodgeChance;

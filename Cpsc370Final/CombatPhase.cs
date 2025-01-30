@@ -6,7 +6,7 @@ public class CombatPhase
     public CombatPhase()
     {
         enemy = new Enemy();
-        Console.WriteLine("You are fighting a " + enemy.Name);
+        Console.WriteLine("You are fighting a " + enemy.name);
         Console.WriteLine("Enemy Stats:");
         PrintEnemyStats();
         RunCombatPhaseLoop();
@@ -21,13 +21,13 @@ public class CombatPhase
     
     private void PrintEnemyStats()
     {
-        Console.WriteLine("Enemy Name: " + enemy.Name);
-        Console.WriteLine("Enemy Health: " + enemy.Health);
-        Console.WriteLine("Enemy Damage Dice: " + enemy.DamageDice);
-        Console.WriteLine("Enemy Dodge Chance: " + enemy.DodgeChance);
-        Console.WriteLine("Enemy Armor Class: " + enemy.ArmorClass);
-        Console.WriteLine("Enemy Special Damage: " + enemy.SpecialDamage);
-        Console.WriteLine("Enemy Special Cooldown: " + enemy.SpecialCooldown);
+        Console.WriteLine("Enemy Name: " + enemy.name);
+        Console.WriteLine("Enemy Health: " + enemy.health);
+        Console.WriteLine("Enemy Damage Dice: " + enemy.damageDice);
+        Console.WriteLine("Enemy Dodge Chance: " + enemy.dodgeChance);
+        Console.WriteLine("Enemy Armor Class: " + enemy.armorClass);
+        Console.WriteLine("Enemy Special Damage: " + enemy.specialDamage);
+        Console.WriteLine("Enemy Special Cooldown: " + enemy.specialCooldown);
     }
 
 
@@ -105,7 +105,7 @@ public class CombatPhase
             case "1":
                 Console.WriteLine("You chose to attack!");
                Program.playerRoundDamage = CombatPhaseActions.AttackDamage(1, Program.player.damageDice);
-                enemy.Health -= attackDamage;
+                enemy.health -= attackDamage;
                 CombatMessages.PlayerAttackText(attackDamage);
                 break;
             case "2":
