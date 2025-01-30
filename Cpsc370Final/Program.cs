@@ -45,7 +45,7 @@ class Program
         {
             if (roomNumber == 1)
             {
-                // BeginCombatPhase(Enemy enemy);
+                CombatPhase combatPhase = new CombatPhase();
             }
             
         }
