@@ -1,4 +1,4 @@
-﻿namespace Cpsc370Final;
+namespace Cpsc370Final;
 
 public class Enemy
 {
