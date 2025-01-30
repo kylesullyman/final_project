@@ -6,6 +6,12 @@ class Program
     public static string playerClass;
     public static int playerRoundDamage;
     public static int enemyRoundDamage;
+
+    public static bool isGameRunning = false;
+
+    public static int roomNumber = 1;
+    
+    public static PlayerStats player;
     
     static void Main(string[] args)
     {
@@ -19,7 +25,28 @@ class Program
         start.BeginStartPhase();
         playerName = start.playerName;
         playerClass = start.classInput;
-        Console.WriteLine(playerClass, playerName);
+
+        // initialize player without constructor
+        
+        // call constructor based on enum
+        switch (playerClass)
+        {
+            case("Warrior"):
+                player = new PlayerStats(PlayerClass.Warrior);
+                break;
+            case("Barbarian"):
+                player = new PlayerStats(PlayerClass.Barbarian);
+                break;
+            case("Wizard"):
+                player = new PlayerStats(PlayerClass.Wizard);
+                break;
+            case("Assassin"):
+                player = new PlayerStats(PlayerClass.Assassin);
+                break;
+        }
+        
+        isGameRunning = true;
+        RunMainLoop();
 
     }
 
@@ -32,4 +59,16 @@ class Program
             Console.WriteLine("  Argument " + i +": " + args[i]);
         }
     }
+
+    private static void RunMainLoop()
+    {
+        while (isGameRunning)
+        {
+            if (roomNumber == 1)
+            {
+                CombatPhase combatPhase = new CombatPhase();
+            }
+            
+        }
+    } 
 }

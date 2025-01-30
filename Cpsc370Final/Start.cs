@@ -80,7 +80,7 @@ public class Start
             Console.WriteLine("Please enter your name: ");
             string name = Console.ReadLine();
 
-            if (playerName == null)
+            if (name.Length < 1)
             {
                 Console.WriteLine("Please enter a valid name.");
                 continue;
