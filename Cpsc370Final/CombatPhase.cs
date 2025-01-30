@@ -104,7 +104,7 @@ public class CombatPhase
         {
             case "1":
                 Console.WriteLine("You chose to attack!");
-               int attackDamage = CombatPhaseActions.AttackDamage(1, Program.player.damageDice);
+               Program.playerRoundDamage = CombatPhaseActions.AttackDamage(1, Program.player.damageDice);
                 enemy.Health -= attackDamage;
                 CombatMessages.PlayerAttackText(attackDamage);
                 break;
