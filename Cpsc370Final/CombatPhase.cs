@@ -104,8 +104,9 @@ public class CombatPhase
         {
             case "1":
                 Console.WriteLine("You chose to attack!");
-               int attackDamage = CombatPhaseActions.AttackDamage(1, 6);
+               int attackDamage = CombatPhaseActions.AttackDamage(1, Program.player.damageDice);
                 enemy.Health -= attackDamage;
+                CombatMessages.PlayerAttackText(attackDamage);
                 break;
             case "2":
                 Console.WriteLine("You chose to use your special!");

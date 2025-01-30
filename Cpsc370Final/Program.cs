@@ -11,6 +11,8 @@ class Program
 
     public static int roomNumber = 1;
     
+    public static PlayerStats player;
+    
     static void Main(string[] args)
     {
         /*if (args.Length < 1)
@@ -24,6 +26,25 @@ class Program
         playerName = start.playerName;
         playerClass = start.classInput;
 
+        // initialize player without constructor
+        
+        // call constructor based on enum
+        switch (playerClass)
+        {
+            case("Warrior"):
+                player = new PlayerStats(PlayerClass.Warrior);
+                break;
+            case("Barbarian"):
+                player = new PlayerStats(PlayerClass.Barbarian);
+                break;
+            case("Wizard"):
+                player = new PlayerStats(PlayerClass.Wizard);
+                break;
+            case("Assassin"):
+                player = new PlayerStats(PlayerClass.Assassin);
+                break;
+        }
+        
         isGameRunning = true;
         RunMainLoop();
 
