@@ -71,6 +71,7 @@ public class PlayerStats
         this.damageDice = damageDice;
         this.dodgeChance = dodgeChance;
         this.armorClass = armorClass;
+        this.specialDamage = specialDamage;
         this.specialCooldown = specialCooldown;
     }
 

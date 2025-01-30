@@ -81,6 +81,7 @@ public class Enemy
         this.damageDice = DamageDice;
         this.dodgeChance = dodgeChance;
         this.armorClass = armorClass;
+        this.specialCooldown = specialCooldown;
         this.specialDamage = specialDamage;
     }
     
