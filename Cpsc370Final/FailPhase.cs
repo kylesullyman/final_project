@@ -7,13 +7,15 @@ public static class FailPhase
     public static void PlayerDefeated(string playerName, string playerClass)
     {
         Console.WriteLine($"{playerName} the {playerClass} has been defeated!");
-        
+        Program.isGameRunning = false;
+
     }
 
     public static void GameOverOptions()
     {
-        Console.WriteLine("Game over! What would you like to do?");
-        Console.WriteLine("1. Restart Game");
+        Console.WriteLine("Game over!");
+        Console.WriteLine("You defeated " + Program.roomNumber + " rooms!");
+        /*Console.WriteLine("1. Restart Game");
         Console.WriteLine("2. Exit");
         string? choice = Console.ReadLine();
 
@@ -30,6 +32,7 @@ public static class FailPhase
                 GameOverOptions();
                 break;
         }
+        */
         
     }
 

@@ -1,0 +1,80 @@
+Spec Document
+
+
+Scope:
+
+Purpose: to be a lit game
+
+Features:
+
+Need to clearly describe the project we are building out:
+
+4 level dungeon game, has a boss at the end
+
+Class Options: Warrior, Barbarian, Wizard, Assassin
+
+Player Stats: Health, 
+Damage(amount of damage guaranteed when attacking), 
+DamageDice(amount of sides a dice has that represents damage added onto base damage), 
+DodgeChance(user inputs a number and if it is higher or lower than a certain number, they dodge), 
+ArmorClass(amount of damage an attack needs to be to be able to hit), SpecialDamage, 
+SpecialCooldown(x amount of rounds/attacks)
+
+Has a random list of 9 monsters that attacks 
+
+Monster Options: Ogre, Orc, Kobold, Giant, Goblin, Werewolf, The Dulllberger
+
+MonsterStats: Health, DamageDice(amount of sides a dice has that reflects damage), DodgeChance, ArmorClass, SpecialDamage, SpecialCooldown
+
+Game Phases:
+
+Start Phase
+Naming Character (username + “the” + class) (Braeden the Assassin)
+Picking Classes
+Start Adventure
+neCombat Phase
+Randomizes Enemy
+Player and AI emy choose between attack, special, and dodge
+Outcome is printed out along with any relevant damage done
+Next Round starts
+Repeats until either player or enemy is defeated
+Phases loop between exploration and combat until 3 rooms have been cleared
+Boss Phase
+Boss fight
+
+
+
+Methods:
+
+
+
+Int AttackDamageCalculation(int damage, int damageDice);
+{
+	//rolls random number from damage dice and adds it to damage and returns
+}
+
+
+User Stories
+As a user, I want to choose between attacking, dodging, and special attack so that I have can have a strategy to win
+As a user, I want to choose my class of warrior so that I can have a strategy to win 
+As a user, I want to be able to create my own unique name so my character is unique to me
+As a user, I w
+
+All Possible Conditionals:
+Both player and enemy attack
+Both player and enemy dodge
+Both player and enemy special
+Player attacks and enemy dodges
+Player attacks and enemy specials
+Player dodges and enemy attack
+Player dodges and enemy specials
+Player specials and enemy attack
+Player specials and enemy dodges
+
+
+If we have time to make:
+Shop and currency with items
+Easy, Medium, and Hard modes, just adds/subtracts all stats to make it easier/harder
+Pick stat boosts in between rounds
+Make explore phase moving in between rooms and finding items
+
