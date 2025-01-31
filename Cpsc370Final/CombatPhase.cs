@@ -114,7 +114,7 @@ public class CombatPhase
                     Console.WriteLine(CombatMessages.EnemySpecialText(enemy.specialDamage));
                 }
             }
-            else if (playerChoice == "dodges" && enemyChoice == "attack")
+            else if (playerChoice == "dodge" && enemyChoice == "attack")
             {
                 if (CombatPhaseActions.PlayerCanDodge(Program.player.dodgeChance))
                 {

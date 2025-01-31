@@ -40,11 +40,11 @@ public class Enemy
         switch (enemyType)
         {
             case EnemyRoster.Goblin:
-                setStats("Goblin", 8, 3, 4, 4, 4, 4, 2);
+                setStats("Dulberg the Goblin", 8, 3, 4, 4, 4, 4, 2);
                 break;
             
             case EnemyRoster.Golem:
-                setStats("Golem", 16, 5, 4, 20, 10, 5, 3);
+                setStats("Dylan the giant Golem", 16, 5, 4, 20, 10, 5, 3);
                 break;
             
             case EnemyRoster.Lobster:
