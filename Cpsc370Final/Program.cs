@@ -67,11 +67,8 @@ class Program
     {
         while (isGameRunning)
         {
-            if (roomNumber == 1)
-            {
-                CombatPhase combatPhase = new CombatPhase();
-            }
-            
+            CombatPhase combatPhase = new CombatPhase();
+            roomNumber++;
         }
     } 
 }
