@@ -7,7 +7,8 @@ public static class FailPhase
     public static void PlayerDefeated(string playerName, string playerClass)
     {
         Console.WriteLine($"{playerName} the {playerClass} has been defeated!");
-        
+        Program.isGameRunning = false;
+
     }
 
     public static void GameOverOptions()
